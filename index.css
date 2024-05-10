@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    padding-top: 70px;
+    background-color: #fafafa;
 }
 
 header {
@@ -17,6 +19,39 @@ header {
 
     h1 {
         margin: 0;
-        color: #fafafa;;
+        color: #fafafa;
+    }
+}
+
+.content {
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 20px;
+
+    .img {
+        max-height: 400px;
+        min-height: 400px;
+        max-width: 400px;
+        min-width: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 100%;
+        background-image: url('/assets/Felis_silvestris_silvestris.jpg');
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        p {
+            margin: 0;
+            text-align: justify;
+        }
     }
 }
