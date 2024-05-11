@@ -46,23 +46,26 @@ header {
 }
 
 .drop-down {
-    padding: 20px;
+    padding: 0 25px;
     box-sizing: border-box;
 
     .drop-down__content {
         display: none;
         flex-direction: column;
         gap: 10px;
+        padding-bottom: 20px;
 
         p {
             margin: 0%;
             font-size: 1.2rem;
+            text-align: justify;
         }
     }
 
     .drop-down__title {
-        border-top: 2px solid #c2c2c2;
-        border-bottom: 2px solid #c2c2c2;
+        border-top: 1px solid #c2c2c2;
+        padding: 30px 0;   
+
         label {
             margin: 10px 0;
             cursor: pointer;
