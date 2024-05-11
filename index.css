@@ -30,17 +30,6 @@ header {
     display: flex;
     gap: 20px;
 
-    .img {
-        max-height: 400px;
-        min-height: 400px;
-        max-width: 400px;
-        min-width: 400px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        border-radius: 100%;
-        background-image: url('/assets/Felis_silvestris_silvestris.jpg');
-    }
-
     .column {
         display: flex;
         flex-direction: column;
@@ -54,4 +43,99 @@ header {
             text-align: justify;
         }
     }
+}
+
+.drop-down {
+    padding: 20px;
+    box-sizing: border-box;
+
+    .drop-down__content {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+
+        p {
+            margin: 0%;
+            font-size: 1.2rem;
+        }
+    }
+
+    .drop-down__title {
+        border-top: 2px solid #c2c2c2;
+        border-bottom: 2px solid #c2c2c2;
+        label {
+            margin: 10px 0;
+            cursor: pointer;
+            width: 100%;
+            user-select: none;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        input {
+            display: none;
+
+            &:checked~label .arrow-up {
+                transform: rotate(180deg);
+            }
+        }
+
+        &:has(input:checked)~.drop-down__content {
+            display: flex;
+        }
+    }
+}
+
+.arrow-up {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 4px;
+    margin-right: 10px;
+
+    &::after {
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid;
+        border-left: 2px solid;
+        transform: rotate(45deg);
+        left: 6px
+    }
+
+    &::before {
+        width: 2px;
+        height: 10px;
+        left: 8px;
+        background: currentColor
+    }
+
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        top: 4px
+    }
+}
+
+.cat-img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 0;
 }
